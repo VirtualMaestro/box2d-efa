@@ -21,8 +21,8 @@ isolation). This repository builds:
 
 | Flavour | File | SIMD | wasm, gzip -9 | mjs, gzip -9 | Together, against `compat` |
 |---|---|---|---|---|---|
-| `standard` | `box2d.mjs`, `box2d.wasm` | yes | 484 915, 174 120 | 55 289, 14 171 | 188 291, -49.6 KB |
-| `scalar` | `box2d.scalar.mjs`, `box2d.scalar.wasm` | no | 499 085, 182 558 | 55 303, 14 183 | 196 741, -41.2 KB |
+| `standard` | `box2d.mjs`, `box2d.wasm` | yes | 484 915, 174 120 | 55 287, 14 168 | 188 288, -49.6 KB |
+| `scalar` | `box2d.scalar.mjs`, `box2d.scalar.wasm` | no | 499 085, 182 558 | 55 301, 14 181 | 196 739, -41.2 KB |
 | npm `compat` | | no | 611 964, 210 890 | 101 985, 27 046 | 237 936 |
 
 - `-Os` with LTO instead of `-O3` with LTO; no `STACK_OVERFLOW_CHECK=2`; the JS is minified; no threads and no enkiTS.
