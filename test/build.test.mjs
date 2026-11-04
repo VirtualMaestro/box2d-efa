@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
 
 import Standard from '../dist/box2d.mjs';
 import Scalar from '../dist/box2d.scalar.mjs';
@@ -80,4 +81,12 @@ test('no threads in either build', () => {
 test('the entry picks the SIMD build here', async () => {
   assert.equal(hasSimd(), true);
   assert.equal(typeof (await Entry()).b2CreateWorld, 'function');
+});
+
+test('a host without SIMD gets the scalar build', async (t) => {
+  t.mock.method(WebAssembly, 'validate', () => false);
+  const files = [];
+  const b2 = await Entry({ locateFile: (file) => { files.push(file); return fileURLToPath(new URL(`../dist/${file}`, import.meta.url)); } });
+  assert.deepEqual(files, ['box2d.scalar.wasm']);
+  assert.equal(typeof b2.b2CreateWorld, 'function');
 });
