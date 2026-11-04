@@ -1,0 +1,22 @@
+{
+  "name": "box2d-efa",
+  "version": "0.1.0",
+  "description": "Box2D v3 compiled to WebAssembly for the EFA project, with and without SIMD, no threads. Built for EFA's needs: no promise of general use or a stable API.",
+  "type": "module",
+  "main": "dist/entry.mjs",
+  "exports": {
+    ".": "./dist/entry.mjs",
+    "./standard": "./dist/box2d.mjs",
+    "./scalar": "./dist/box2d.scalar.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE", "LICENSE.box2d.txt"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "fetch-deps": "bash scripts/fetch-deps.sh",
+    "build": "bash scripts/build.sh",
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "license": "MIT",
+  "private": true
+}

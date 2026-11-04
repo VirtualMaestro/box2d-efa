@@ -1,0 +1,14 @@
+{
+  "box2d3-wasm": {
+    "repo": "https://github.com/Birch-san/box2d3-wasm.git",
+    "sha": "59223b1381c20812a0e91d2c7bde5302cf746cb1"
+  },
+  "box2d": {
+    "repo": "https://github.com/Birch-san/box2d.git",
+    "sha": "acb3554d25f19dd98867d697b63d00282655b481"
+  },
+  "box2cpp": {
+    "repo": "https://github.com/Birch-san/box2cpp.git",
+    "sha": "82139bef911505fab5efcfd8da5983a7fba11d25"
+  }
+}
