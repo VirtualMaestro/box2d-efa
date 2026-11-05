@@ -1,6 +1,6 @@
 {
   "name": "box2d-efa",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Box2D v3 compiled to WebAssembly for the EFA project, with and without SIMD, no threads. Built for EFA's needs: no promise of general use or a stable API.",
   "type": "module",
   "main": "dist/entry.mjs",

@@ -30,6 +30,7 @@ isolation). This repository builds:
   `csrc/clock.cpp` and `--wrap=clock_gettime` make it read zero, so `b2World_GetProfile` is all zeros until
   `enableStepTimers(true)` is called. Results do not depend on it (`test/build.test.mjs`).
 - `b2WorldDef.workerCount` must stay at its default: this build cannot start threads.
+- `readMoved(worldId)` and `flatOut()` read every moved body in one call: `csrc/flat.cpp` has the layout.
 
 ## Which build a host gets
 

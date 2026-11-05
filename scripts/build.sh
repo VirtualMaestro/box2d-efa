@@ -56,7 +56,7 @@ for FLAVOUR in $FLAVOURS; do
   echo "==> emcc link ($FLAVOUR) -> $OUT/$BASENAME.mjs"
   # No threading.cpp and no enkiTS: this build has no threads. The upstream's STACK_OVERFLOW_CHECK=2 and --minify 0 are
   # left out as well.
-  em++ -lembind "$GLUE/csrc/glue.cpp" "$GLUE/csrc/debugDraw.cpp" "$ROOT/csrc/clock.cpp" "$LIB" \
+  em++ -lembind "$GLUE/csrc/glue.cpp" "$GLUE/csrc/debugDraw.cpp" "$ROOT/csrc/clock.cpp" "$ROOT/csrc/flat.cpp" "$LIB" \
     -I "$BOX2D/include" \
     -I "$ROOT/deps/box2cpp/include" \
     -std=c++20 \
